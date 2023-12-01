@@ -11,15 +11,19 @@
     "build/"
   ],
   "scripts": {
-    "prebuild": "rimraf build",
     "build": "rollup --config",
-    "postbuild": "dts-bundle-generator --config ./dts-bundle.config.cjs",
     "check": "tsc --noEmit",
     "ci": "pnpm run lint && pnpm run check && pnpm run test && pnpm run build",
     "knip": "knip",
     "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
     "lint:package-json": "eslint 'package.json'",
+    "postbuild": "dts-bundle-generator --config ./dts-bundle.config.cjs",
+    "prebuild": "rimraf build",
     "test": "vitest run --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pilaton/pmjs.git"
   },
   "keywords": [
     "npm",
@@ -37,6 +41,10 @@
     "url": "https://pilaton.com"
   },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pilaton/pmjs/issues",
+    "email": "dev@pilaton.com"
+  },
   "dependencies": {
     "execa": "^8.0.1"
   },

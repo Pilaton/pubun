@@ -49,18 +49,18 @@ PMJS offers several import options - default import, or named import.
 
 ```js
 // default import
-import pmjs from 'pmjs';
+import pmjs from "pmjs";
 
 // or named import. Recommended!
-import { defineManager, defineGlobalManagers } from 'pmjs';
+import { defineManager, defineGlobalManagers } from "pmjs";
 ```
 
 Or if you want to use CommonJS:
 
 ```js
-const pmjs = require('pmjs');
+const pmjs = require("pmjs");
 // or
-const { defineManager, defineGlobalManagers } = require('pmjs');
+const { defineManager, defineGlobalManagers } = require("pmjs");
 ```
 
 <!-- markdownlint-disable -->
@@ -72,10 +72,10 @@ const { defineManager, defineGlobalManagers } = require('pmjs');
 ### Example of defining a package manager for the current project
 
 ```js
-import { defineManager } from 'pmjs';
+import { defineManager } from "pmjs";
 
 async function demoFunction() {
-  const packageManager = await defineManager('/path/to/project');
+  const packageManager = await defineManager("/path/to/project");
 
   console.log(packageManager); // npm | yarn | pnpm | bun
 }
@@ -86,7 +86,7 @@ demoFunction();
 ### Example of detecting all globally installed package managers
 
 ```js
-import { defineGlobalManagers } from 'pmjs';
+import { defineGlobalManagers } from "pmjs";
 
 async function demoFunction() {
   const globalManagers = await defineGlobalManagers();
@@ -113,7 +113,7 @@ demoFunction();
 Since all PMJS operations are cached in order to optimize speed, sometimes you may need to clear the cache manually.
 
 ```js
-import { clearCache } from 'pmjs';
+import { clearCache } from "pmjs";
 
 clearCache();
 ```
@@ -131,10 +131,10 @@ Checks for the presence of characteristic files (e.g., package-lock.json for npm
 
 Supported package managers: **`npm`**, **`yarn`**, **`pnpm`**, **`bun`**
 
-```js
-type PackageManager = "npm" | "yarn" | "pnpm" | "bun"
+```ts
+type PackageManager = "npm" | "yarn" | "pnpm" | "bun";
 
-defineManager: (path?: string) => Promise<PackageManager | null>
+defineManager: (path?: string) => Promise<PackageManager | null>;
 ```
 
 | Argument | Type     | Default value                                                     | Description                                                                                     |
@@ -145,13 +145,13 @@ defineManager: (path?: string) => Promise<PackageManager | null>
 
 ### defineGlobalManagers()
 
-```js
+```ts
 interface IGlobalManagerData {
- manager: PackageManager;
- version: string;
+  manager: PackageManager;
+  version: string;
 }
 
-defineGlobalManagers: () => Promise<IGlobalManagerData[] | null>
+defineGlobalManagers: () => Promise<IGlobalManagerData[] | null>;
 ```
 
 **Return:** A promise that resolves to an array of global manager data, including the name and version of each installed package manager, or `null` if none is installed.
@@ -162,6 +162,6 @@ Clears the entire cache.
 This function removes all cached data related to package manager checks.
 Useful for resetting the state to ensure fresh data is fetched.
 
-```js
+```ts
 clearCache: () => void
 ```
