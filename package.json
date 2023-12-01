@@ -1,0 +1,68 @@
+{
+  "name": "pmjs",
+  "version": "0.1.0",
+  "description": "Asynchronous library with built-in caching to identify available package managers",
+  "exports": {
+    "types": "./build/index.d.ts",
+    "import": "./build/index.mjs",
+    "require": "./build/index.js"
+  },
+  "files": [
+    "build/"
+  ],
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "rollup --config",
+    "postbuild": "dts-bundle-generator --config ./dts-bundle.config.cjs",
+    "check": "tsc --noEmit",
+    "ci": "pnpm run lint && pnpm run check && pnpm run test && pnpm run build",
+    "knip": "knip",
+    "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
+    "lint:package-json": "eslint 'package.json'",
+    "test": "vitest run --coverage"
+  },
+  "keywords": [
+    "npm",
+    "yarn",
+    "pnpm",
+    "bun",
+    "package-manager",
+    "package.json",
+    "package-lock.json",
+    "detect"
+  ],
+  "author": {
+    "name": "Pilaton",
+    "email": "dev@pilaton.com",
+    "url": "https://pilaton.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "execa": "^8.0.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "@vitest/coverage-istanbul": "^0.34.6",
+    "dts-bundle-generator": "^9.0.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard-with-typescript": "^40.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-package-json": "^0.2.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-unicorn": "^49.0.0",
+    "knip": "^3.3.2",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.6.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.2",
+    "vitest": "^0.34.6"
+  },
+  "type": "module"
+}
