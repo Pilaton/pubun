@@ -13,7 +13,7 @@
   "scripts": {
     "build": "rollup --config",
     "check": "tsc --noEmit",
-    "ci": "pnpm run lint && pnpm run check && pnpm run test && pnpm run build",
+    "ci": "pnpm run lint && pnpm run check && pnpm run test",
     "knip": "knip",
     "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
     "lint:package-json": "eslint 'package.json'",
