@@ -1,6 +1,6 @@
 {
   "name": "pmjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Asynchronous library with built-in caching to identify available package managers",
   "exports": {
     "types": "./build/index.d.ts",
