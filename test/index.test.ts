@@ -45,15 +45,15 @@ describe('Defining global package managers test', () => {
   test('returns an array of global managers or null', async () => {
     const result = await defineGlobalManagers();
 
-    if (result) {
+    if (result === null) {
+      expect(result).toBeNull();
+    } else {
       expect(result.length).toBeGreaterThan(0);
       for (const managerData of result) {
         expect(managerData).toHaveProperty('manager');
         expect(['npm', 'yarn', 'pnpm', 'bun']).toContain(managerData.manager);
         expect(managerData).toHaveProperty('version');
       }
-    } else {
-      expect(result).toBeNull();
     }
   });
 

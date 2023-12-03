@@ -20,7 +20,7 @@ const checkGlobalInstallation = async (manager: PackageManager): Promise<boolean
   const cacheKey = `globalInstall-${manager}`;
   const cached = cache.get(cacheKey);
 
-  if (cached && 'isGlobalInstalled' in cached) return cached.isGlobalInstalled;
+  if (cached !== undefined && 'isGlobalInstalled' in cached) return cached.isGlobalInstalled;
 
   try {
     const version = await getVersion(manager);
@@ -44,7 +44,7 @@ const checkGlobalInstallation = async (manager: PackageManager): Promise<boolean
 export const defineGlobalManagers = async (): Promise<IGlobalManagerData[] | null> => {
   const cacheKey = `globalManagers`;
   const cached = cache.get(cacheKey);
-  if (cached && 'globalManagers' in cached) return cached.globalManagers;
+  if (cached !== undefined && 'globalManagers' in cached) return cached.globalManagers;
 
   const managers = Object.keys(lockFiles) as PackageManager[];
 
