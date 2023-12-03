@@ -1,7 +1,6 @@
-import { cache } from './cache.js';
-
-import isPathExists from './utils/is-path-exists.js';
 import { resolve } from 'node:path';
+import { cache } from './cache.js';
+import isPathExists from './utils/is-path-exists.js';
 
 export type PackageManager = 'npm' | 'yarn' | 'pnpm' | 'bun';
 

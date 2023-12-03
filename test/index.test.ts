@@ -1,9 +1,8 @@
-import { expect, test, describe, beforeEach } from 'vitest';
-import { defineGlobalManagers, defineManager } from '../src/index.js';
 import { join } from 'node:path';
+import { expect, test, describe, beforeEach } from 'vitest';
 import { cache, clearCache } from '../src/cache.js';
-
 import { type IGlobalManagerData } from '../src/define-global-managers.js';
+import { defineGlobalManagers, defineManager } from '../src/index.js';
 
 describe('Package manager definition tests', () => {
   beforeEach(clearCache);
@@ -76,7 +75,7 @@ describe('Cache tests', () => {
 
   beforeEach(clearCache);
 
-  test('writing and reading from cache', async () => {
+  test('writing and reading from cache', () => {
     expect(cache.get(cacheKey)).toBeUndefined();
     cache.set(cacheKey, { isGlobalInstalled: true });
 

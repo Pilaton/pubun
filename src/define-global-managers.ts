@@ -1,6 +1,5 @@
 import { cache } from './cache.js';
 import { type PackageManager, lockFiles } from './define-manager.js';
-
 import cleanNulls from './utils/clean-nulls.js';
 import getVersion from './version.js';
 
