@@ -41,6 +41,9 @@ Asynchronous library with built-in caching to identify available package manager
 
 ## 🕹️ Install
 
+> [!IMPORTANT]
+> There are difficulties with publishing to NPM at the moment, so there is no package in the NPM registry right now.
+
 ```bash
 npm install pmjs
 ```
