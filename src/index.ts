@@ -7,9 +7,9 @@ export { defineGlobalManagers } from './define-global-managers.js';
 export { defineManager } from './define-manager.js';
 
 /**
- * A pmjs object that integrates package manager functionality.
+ * A pubun object that integrates package manager functionality.
  */
-const pmjs = {
+const pubun = {
   /** @see clearCache */
   clearCache,
   /** @see defineGlobalManagers */
@@ -18,4 +18,4 @@ const pmjs = {
   defineManager,
 };
 
-export default pmjs;
+export default pubun;

@@ -3,13 +3,13 @@
   "MD041": false,
 } -->
 
-<div align="center">
-  <img src="./public/logo.svg" alt="PMJS logo" width="500">
-</div>
+<!-- <div align="center">
+  <img src="./public/logo.svg" alt="Pubun logo" width="500">
+</div> -->
 
-# PMJS <!-- omit from toc -->
+# Pubun <!-- omit from toc -->
 
-![npm](https://img.shields.io/npm/v/pmjs?style=for-the-badge&logo=npm&logoColor=white&labelColor=CB3837&color=CB3837)
+![npm](https://img.shields.io/npm/v/pubun?style=for-the-badge&logo=npm&logoColor=white&labelColor=CB3837&color=CB3837)
 ![Static Badge](<https://img.shields.io/badge/Coverage%20(istanbul)-100%25-green?style=for-the-badge&logo=vitest&logoColor=black&labelColor=298D46&color=298D46>)
 
 Asynchronous library with built-in caching to identify available package managers.
@@ -21,7 +21,7 @@ Asynchronous library with built-in caching to identify available package manager
 - [🏄‍♀️ Usage](#️-usage)
   - [Example of defining a package manager for the current project](#example-of-defining-a-package-manager-for-the-current-project)
   - [Example of detecting all globally installed package managers](#example-of-detecting-all-globally-installed-package-managers)
-  - [Clearing PMJS cache](#clearing-pmjs-cache)
+  - [Clearing Pubun cache](#clearing-pubun-cache)
 - [📜 API](#-api)
   - [defineManager()](#definemanager)
   - [defineGlobalManagers()](#defineglobalmanagers)
@@ -45,25 +45,25 @@ Asynchronous library with built-in caching to identify available package manager
 > There are difficulties with publishing to NPM at the moment, so there is no package in the NPM registry right now.
 
 ```bash
-npm install pmjs
+npm install pubun
 ```
 
-PMJS offers several import options - default import, or named import.
+Pubun offers several import options - default import, or named import.
 
 ```js
 // default import
-import pmjs from 'pmjs';
+import pubun from 'pubun';
 
 // or named import. Recommended!
-import { defineManager, defineGlobalManagers } from 'pmjs';
+import { defineManager, defineGlobalManagers } from 'pubun';
 ```
 
 Or if you want to use CommonJS:
 
 ```js
-const pmjs = require('pmjs');
+const pubun = require('pubun');
 // or
-const { defineManager, defineGlobalManagers } = require('pmjs');
+const { defineManager, defineGlobalManagers } = require('pubun');
 ```
 
 <!-- markdownlint-disable -->
@@ -75,7 +75,7 @@ const { defineManager, defineGlobalManagers } = require('pmjs');
 ### Example of defining a package manager for the current project
 
 ```js
-import { defineManager } from 'pmjs';
+import { defineManager } from 'pubun';
 
 async function demoFunction() {
   const packageManager = await defineManager('/path/to/project');
@@ -89,7 +89,7 @@ demoFunction();
 ### Example of detecting all globally installed package managers
 
 ```js
-import { defineGlobalManagers } from 'pmjs';
+import { defineGlobalManagers } from 'pubun';
 
 async function demoFunction() {
   const globalManagers = await defineGlobalManagers();
@@ -111,12 +111,12 @@ async function demoFunction() {
 demoFunction();
 ```
 
-### Clearing PMJS cache
+### Clearing Pubun cache
 
-Since all PMJS operations are cached in order to optimize speed, sometimes you may need to clear the cache manually.
+Since all Pubun operations are cached in order to optimize speed, sometimes you may need to clear the cache manually.
 
 ```js
-import { clearCache } from 'pmjs';
+import { clearCache } from 'pubun';
 
 clearCache();
 ```

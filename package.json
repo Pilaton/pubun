@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pilaton/pmjs.git"
+    "url": "https://github.com/Pilaton/pubun.git"
   },
   "keywords": [
     "npm",
@@ -41,7 +41,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pilaton/pmjs/issues",
+    "url": "https://github.com/pilaton/pubun/issues",
     "email": "dev@pilaton.com"
   },
   "dependencies": {
