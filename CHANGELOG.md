@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/Pilaton/pmjs/compare/v1.1.0...v1.1.1) (2023-12-11)
+
+
+### Bug Fixes
+
+* **ci:** add --no-git-checks ([e644807](https://github.com/Pilaton/pmjs/commit/e644807e14b7b761b6b5728ff530cbecd9eab33b))
+
 ## [1.1.0](https://github.com/Pilaton/pmjs/compare/v1.0.1...v1.1.0) (2023-12-11)
 
 
