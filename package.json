@@ -1,5 +1,5 @@
 {
-  "name": "pmjs",
+  "name": "pubun",
   "version": "1.0.1",
   "description": "Asynchronous library with built-in caching to identify available package managers",
   "exports": {
