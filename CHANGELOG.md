@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/Pilaton/pubun/compare/v1.1.2...v1.1.3) (2023-12-11)
+
+
+### Bug Fixes
+
+* Minor changes to complete the move ([525bf4f](https://github.com/Pilaton/pubun/commit/525bf4f7a495834c3aab51415a354ba138cb3303))
+
 ## [1.1.2](https://github.com/Pilaton/pubun/compare/v1.1.1...v1.1.2) (2023-12-11)
 
 
