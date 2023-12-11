@@ -3,9 +3,9 @@
   "MD041": false,
 } -->
 
-<!-- <div align="center">
-  <img src="./public/logo.svg" alt="Pubun logo" width="500">
-</div> -->
+<div align="center">
+  <img src="./public/pubun.jpg" alt="Pubun logo" width="700">
+</div>
 
 # Pubun <!-- omit from toc -->
 
@@ -168,7 +168,3 @@ Useful for resetting the state to ensure fresh data is fetched.
 ```ts
 clearCache: () => void
 ```
-
----
-
-[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)

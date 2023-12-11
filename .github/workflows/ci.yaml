@@ -57,9 +57,9 @@ jobs:
           - name: NPM
             registry: https://registry.npmjs.org/
             token-name: NPM_TOKEN
-          - name: GitHub Packages
-            registry: https://npm.pkg.github.com/
-            token-name: GITHUB_TOKEN
+          # - name: GitHub Packages
+          #   registry: https://npm.pkg.github.com/
+          #   token-name: GITHUB_TOKEN
     steps:
       - uses: actions/checkout@main
 
