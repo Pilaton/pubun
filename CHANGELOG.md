@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Pilaton/pmjs/compare/v1.0.1...v1.1.0) (2023-12-11)
+
+
+### Features
+
+* **ci:** publish to github registry ([552a4f4](https://github.com/Pilaton/pmjs/commit/552a4f41668b77d2387e2ce14ef994e50bd2fbc4))
+
 ## [1.0.1](https://github.com/Pilaton/pmjs/compare/v1.0.0...v1.0.1) (2023-12-03)
 
 
