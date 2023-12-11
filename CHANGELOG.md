@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/Pilaton/pubun/compare/v1.1.1...v1.1.2) (2023-12-11)
+
+
+### Bug Fixes
+
+* finish rename package ([d6339ae](https://github.com/Pilaton/pubun/commit/d6339ae8e1af721a80bc5da796671b218210478a))
+
 ## [1.1.1](https://github.com/Pilaton/pmjs/compare/v1.1.0...v1.1.1) (2023-12-11)
 
 
