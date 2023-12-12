@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/Pilaton/pubun/compare/v1.1.3...v1.1.4) (2023-12-12)
+
+
+### Bug Fixes
+
+* **docs:** change image ([9d8a8a0](https://github.com/Pilaton/pubun/commit/9d8a8a0532601edeb9a312f5ac7cd209159ec155))
+
 ## [1.1.3](https://github.com/Pilaton/pubun/compare/v1.1.2...v1.1.3) (2023-12-11)
 
 
