@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Pilaton/pubun/compare/v1.1.4...v1.2.0) (2023-12-14)
+
+
+### Features
+
+* **lint:** Replaced a large number of linting bags with one universal one ([25f8d25](https://github.com/Pilaton/pubun/commit/25f8d25ef52460c556cde258b8f4da78338aa384))
+
 ## [1.1.4](https://github.com/Pilaton/pubun/compare/v1.1.3...v1.1.4) (2023-12-12)
 
 
