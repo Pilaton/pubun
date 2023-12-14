@@ -1,7 +1,7 @@
 {
+  "extends": "@tsconfig/node-lts/tsconfig.json",
   "compilerOptions": {
     "declaration": false,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "module": "NodeNext",
@@ -9,9 +9,7 @@
     "noImplicitAny": true,
     "noEmit": true,
     "outDir": "./build",
-    "sourceMap": true,
-    "strict": true,
-    "target": "ESNext"
+    "sourceMap": true
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src"]
 }
