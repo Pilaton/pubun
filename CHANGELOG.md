@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/Pilaton/pubun/compare/v1.2.0...v1.3.0) (2024-01-15)
+
+
+### Features
+
+* **tests:** add cache test ([94c6f82](https://github.com/Pilaton/pubun/commit/94c6f82ad14104fb94dfcb6fb735b085a4502c72))
+
+
+### Bug Fixes
+
+* **docs:** Remove image ([019bc6c](https://github.com/Pilaton/pubun/commit/019bc6c2daec560aebe33394af16e59e518fab0e))
+
 ## [1.2.0](https://github.com/Pilaton/pubun/compare/v1.1.4...v1.2.0) (2023-12-14)
 
 
