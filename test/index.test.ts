@@ -72,14 +72,25 @@ describe('Defining global package managers test', () => {
 describe('Cache tests', () => {
   const manager = 'pnpm';
   const cacheKey = `globalInstall-${manager}`;
+  const globalInstalledCache = { isGlobalInstalled: true };
 
   beforeEach(clearCache);
 
   test('writing and reading from cache', () => {
     expect(cache.get(cacheKey)).toBeUndefined();
-    cache.set(cacheKey, { isGlobalInstalled: true });
+    cache.set(cacheKey, globalInstalledCache);
 
     const cached = cache.get(cacheKey);
-    expect(cached).toEqual({ isGlobalInstalled: true });
+    expect(cached).toEqual(globalInstalledCache);
+  });
+
+  test('clear cache', () => {
+    expect(cache.get(cacheKey)).toBeUndefined();
+    cache.set(cacheKey, globalInstalledCache);
+
+    expect(cache.get(cacheKey)).toEqual(globalInstalledCache);
+
+    clearCache();
+    expect(cache.get(cacheKey)).toBeUndefined();
   });
 });
