@@ -3,10 +3,6 @@
   "MD041": false,
 } -->
 
-<div align="center">
-  <img src="./public/pubun.jpg" alt="Pubun logo" width="700">
-</div>
-
 # Pubun <!-- omit from toc -->
 
 ![npm](https://img.shields.io/npm/v/pubun?style=for-the-badge&logo=npm&logoColor=white&labelColor=CB3837&color=CB3837)
