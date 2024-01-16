@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/Pilaton/pubun/compare/v1.3.0...v1.3.1) (2024-01-16)
+
+
+### Bug Fixes
+
+* **docs:** Removed outdated information ([61b6127](https://github.com/Pilaton/pubun/commit/61b61279187592938d3c5de1ab4a1984cfa996a3))
+
 ## [1.3.0](https://github.com/Pilaton/pubun/compare/v1.2.0...v1.3.0) (2024-01-15)
 
 
