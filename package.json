@@ -11,13 +11,13 @@
     "build/"
   ],
   "scripts": {
+    "prebuild": "rimraf build",
     "build": "rollup --config",
+    "postbuild": "dts-bundle-generator --config ./dts-bundle.config.cjs",
     "check": "tsc --noEmit",
+    "lint": "eslint .",
     "ci": "pnpm run lint && pnpm run check && pnpm run test:coverage",
     "knip": "knip",
-    "lint": "eslint .",
-    "postbuild": "dts-bundle-generator --config ./dts-bundle.config.cjs",
-    "prebuild": "rimraf build",
     "test": "vitest",
     "test:coverage": "vitest run --coverage"
   },

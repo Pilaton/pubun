@@ -68,6 +68,9 @@ jobs:
           node-version: '20.x'
           registry-url: ${{ matrix.registry }}
 
+      - name: Create .npmrc
+        run: echo "enable-pre-post-scripts=true" > .npmrc
+
       - name: Install pnpm
         uses: pnpm/action-setup@master
         with:
