@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/Pilaton/pubun/compare/v2.0.0...v2.0.1) (2024-02-11)
+
+
+### Bug Fixes
+
+* fix export default ([be38290](https://github.com/Pilaton/pubun/commit/be382909b6e580b0dfc980bddc90ec661b70bfbd))
+
 ## [2.0.0](https://github.com/Pilaton/pubun/compare/v1.3.2...v2.0.0) (2024-02-11)
 
 
