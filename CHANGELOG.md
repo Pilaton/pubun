@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/Pilaton/pubun/compare/v1.3.2...v2.0.0) (2024-02-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* Remove CommonJS modules
+
+### Features
+
+* Remove CommonJS modules ([07cc038](https://github.com/Pilaton/pubun/commit/07cc038563acc7c5d61e31ac30f531aaaa56afde))
+
 ## [1.3.2](https://github.com/Pilaton/pubun/compare/v1.3.1...v1.3.2) (2024-02-11)
 
 
