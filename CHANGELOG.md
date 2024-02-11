@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.2](https://github.com/Pilaton/pubun/compare/v1.3.1...v1.3.2) (2024-02-11)
+
+
+### Bug Fixes
+
+* **ci:** Enable pre & post fro PNPM ([7287e37](https://github.com/Pilaton/pubun/commit/7287e3756e99b191764b7a2c98d1349715522995))
+* **test:** fix tsconfig ([d5bc9e3](https://github.com/Pilaton/pubun/commit/d5bc9e3d2cb8a80bca4169afde101860b55aaa71))
+
 ## [1.3.1](https://github.com/Pilaton/pubun/compare/v1.3.0...v1.3.1) (2024-01-16)
 
 
