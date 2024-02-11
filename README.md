@@ -29,7 +29,6 @@ Asynchronous library with built-in caching to identify available package manager
 - [x] Identifies all available globally installed package managers and their versions.
 - [x] Can detect package managers such as: **`npm`**, **`yarn`**, **`pnpm`** and **`bun`**.
 - [x] **Uses cache** at all stages, which can be forcibly cleared.
-- [x] ESM and CommonJS available.
 
 <!-- markdownlint-disable -->
 <div align="right">...</div>
@@ -49,14 +48,6 @@ import pubun from 'pubun';
 
 // or named import. Recommended!
 import { defineManager, defineGlobalManagers } from 'pubun';
-```
-
-Or if you want to use CommonJS:
-
-```js
-const pubun = require('pubun');
-// or
-const { defineManager, defineGlobalManagers } = require('pubun');
 ```
 
 <!-- markdownlint-disable -->

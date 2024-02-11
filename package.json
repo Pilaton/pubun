@@ -4,8 +4,7 @@
   "description": "Asynchronous library with built-in caching to identify available package managers",
   "exports": {
     "types": "./build/index.d.ts",
-    "import": "./build/index.mjs",
-    "require": "./build/index.js"
+    "import": "./build/index.js"
   },
   "files": [
     "build/"

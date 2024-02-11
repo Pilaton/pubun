@@ -16,11 +16,6 @@ export default defineConfig({
     {
       ...commonOutput,
       file: './build/index.js',
-      format: 'cjs',
-    },
-    {
-      ...commonOutput,
-      file: './build/index.mjs',
       format: 'es',
     },
   ],
