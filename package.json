@@ -1,6 +1,6 @@
 {
   "name": "pubun",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Asynchronous library with built-in caching to identify available package managers",
   "exports": {
     "types": "./build/index.d.ts",
