@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/Pilaton/pubun/compare/v2.0.1...v2.1.0) (2024-05-06)
+
+
+### Features
+
+* Update packages ([84f40dd](https://github.com/Pilaton/pubun/commit/84f40dd215b0177532318d0094a9592405bcdc22))
+
 ## [2.0.1](https://github.com/Pilaton/pubun/compare/v2.0.0...v2.0.1) (2024-02-11)
 
 
