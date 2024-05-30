@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, test } from 'vitest';
 import { cache, clearCache } from '../src/cache.js';
 import type { GlobalManagerData } from '../src/define-global-managers.js';
 import { defineGlobalManagers, defineManager } from '../src/index.js';
+import getVersion from '../src/version.js';
 
 describe('Package manager definition tests', () => {
   beforeEach(clearCache);
@@ -21,6 +22,13 @@ describe('Package manager definition tests', () => {
 
     const validManagers = managers.filter((m) => m !== 'empty');
     expect(validManagers).toContain(result);
+  });
+
+  test('test get version', async () => {
+    const manager = 'npm';
+    const version = await getVersion(manager);
+
+    expect(version).toMatch(/^\d+\.\d+\.\d+/);
   });
 });
 
