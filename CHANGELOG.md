@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/Pilaton/pubun/compare/v2.1.1...v2.1.2) (2024-05-30)
+
+
+### Bug Fixes
+
+* **lint:** replace package ([aa2aba6](https://github.com/Pilaton/pubun/commit/aa2aba666cbfeab0cb300a1213e8df9008960bb4))
+
 ## [2.1.1](https://github.com/Pilaton/pubun/compare/v2.1.0...v2.1.1) (2024-05-30)
 
 
