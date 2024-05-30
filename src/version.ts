@@ -1,5 +1,5 @@
 import { execa } from 'execa';
-import { type PackageManager } from './define-manager.js';
+import type { PackageManager } from './define-manager.js';
 
 /**
  * Retrieves the version of a given package manager.

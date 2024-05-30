@@ -1,7 +1,7 @@
 import { join } from 'node:path';
-import { expect, test, describe, beforeEach } from 'vitest';
+import { beforeEach, describe, expect, test } from 'vitest';
 import { cache, clearCache } from '../src/cache.js';
-import { type IGlobalManagerData } from '../src/define-global-managers.js';
+import type { GlobalManagerData } from '../src/define-global-managers.js';
 import { defineGlobalManagers, defineManager } from '../src/index.js';
 
 describe('Package manager definition tests', () => {
@@ -61,7 +61,7 @@ describe('Defining global package managers test', () => {
     const cachedGlobalManagers = [
       { manager: 'npm', version: '6.14.8' },
       { manager: 'yarn', version: '1.22.5' },
-    ] satisfies IGlobalManagerData[];
+    ] satisfies GlobalManagerData[];
 
     cache.set('globalManagers', { globalManagers: cachedGlobalManagers });
     const result = await defineGlobalManagers();

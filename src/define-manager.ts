@@ -23,7 +23,9 @@ export const lockFiles = {
 export const defineManager = async (path = process.cwd()): Promise<PackageManager | null> => {
   const cacheKey = `lockfile-${path}`;
   const cached = cache.get(cacheKey);
-  if (cached !== undefined && 'lockFileType' in cached) return cached.lockFileType;
+  if (cached !== undefined && 'lockFileType' in cached) {
+    return cached.lockFileType;
+  }
 
   for (const [manager, fileName] of Object.entries(lockFiles)) {
     if (await isPathExists(resolve(path, fileName))) {

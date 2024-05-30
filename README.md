@@ -133,12 +133,12 @@ defineManager: (path?: string) => Promise<PackageManager | null>;
 ### defineGlobalManagers()
 
 ```ts
-interface IGlobalManagerData {
+interface GlobalManagerData {
   manager: PackageManager;
   version: string;
 }
 
-defineGlobalManagers: () => Promise<IGlobalManagerData[] | null>;
+defineGlobalManagers: () => Promise<GlobalManagerData[] | null>;
 ```
 
 **Return:** A promise that resolves to an array of global manager data, including the name and version of each installed package manager, or `null` if none is installed.

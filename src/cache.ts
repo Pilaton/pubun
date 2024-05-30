@@ -1,17 +1,17 @@
-import { type IGlobalManagerData } from './define-global-managers.js';
-import { type PackageManager } from './define-manager.js';
+import type { GlobalManagerData } from './define-global-managers.js';
+import type { PackageManager } from './define-manager.js';
 
-interface ICacheGlobalInstalled {
+interface CacheGlobalInstalled {
   isGlobalInstalled: boolean;
 }
-interface ICacheLockFileType {
+interface CacheLockFileType {
   lockFileType: PackageManager | null;
 }
-interface ICacheGlobalManagers {
-  globalManagers: IGlobalManagerData[] | null;
+interface CacheGlobalManagers {
+  globalManagers: GlobalManagerData[] | null;
 }
 
-type Cache = ICacheGlobalInstalled | ICacheLockFileType | ICacheGlobalManagers;
+type Cache = CacheGlobalInstalled | CacheLockFileType | CacheGlobalManagers;
 
 // Cache initialization using a Map.
 export const cache = new Map<string, Cache>();
