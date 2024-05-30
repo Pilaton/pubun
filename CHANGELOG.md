@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/Pilaton/pubun/compare/v2.1.0...v2.1.1) (2024-05-30)
+
+
+### Bug Fixes
+
+* **test:** Added test for getVersion ([25aaf54](https://github.com/Pilaton/pubun/commit/25aaf54de5e2ec546dfeca960a50b8b0396dd697))
+
 ## [2.1.0](https://github.com/Pilaton/pubun/compare/v2.0.1...v2.1.0) (2024-05-06)
 
 
