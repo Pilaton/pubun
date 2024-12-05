@@ -16,6 +16,7 @@ export interface GlobalManagerData {
  * @param {PackageManager} manager - The package manager to check for global installation.
  * @returns {Promise<boolean>} A promise that resolves to `true` if the package manager is installed globally, or `false` otherwise.
  */
+const REGEX_VERSION = /^\d+\.\d+\.\d+$/;
 const checkGlobalInstallation = async (manager: PackageManager): Promise<boolean> => {
   const cacheKey = `globalInstall-${manager}`;
   const cached = cache.get(cacheKey);
@@ -26,7 +27,7 @@ const checkGlobalInstallation = async (manager: PackageManager): Promise<boolean
 
   try {
     const version = await getVersion(manager);
-    const isInstalled = /^\d+\.\d+\.\d+$/.test(version);
+    const isInstalled = REGEX_VERSION.test(version);
     cache.set(cacheKey, { isGlobalInstalled: isInstalled });
     return isInstalled;
   } catch {

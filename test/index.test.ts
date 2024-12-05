@@ -5,6 +5,8 @@ import type { GlobalManagerData } from '../src/define-global-managers.js';
 import { defineGlobalManagers, defineManager } from '../src/index.js';
 import getVersion from '../src/version.js';
 
+const REGEX_VERSION = /^\d+\.\d+\.\d+/;
+
 describe('Package manager definition tests', () => {
   beforeEach(clearCache);
 
@@ -28,7 +30,7 @@ describe('Package manager definition tests', () => {
     const manager = 'npm';
     const version = await getVersion(manager);
 
-    expect(version).toMatch(/^\d+\.\d+\.\d+/);
+    expect(version).toMatch(REGEX_VERSION);
   });
 });
 
