@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/Pilaton/pubun/compare/v2.1.2...v2.1.3) (2024-12-05)
+
+
+### Bug Fixes
+
+* ci ([1a5285c](https://github.com/Pilaton/pubun/commit/1a5285c82af944c2636e3d502d5ffadb9c493575))
+
 ## [2.1.2](https://github.com/Pilaton/pubun/compare/v2.1.1...v2.1.2) (2024-05-30)
 
 
