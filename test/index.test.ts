@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, test } from 'vitest';
 import { cache, clearCache } from '../src/cache.js';
 import type { GlobalManagerData } from '../src/define-global-managers.js';
 import { defineGlobalManagers, defineManager } from '../src/index.js';
+import cleanNulls from '../src/utils/clean-nulls.js';
 import getVersion from '../src/version.js';
 
 const REGEX_VERSION = /^\d+\.\d+\.\d+/;
@@ -102,5 +103,56 @@ describe('Cache tests', () => {
 
     clearCache();
     expect(cache.get(cacheKey)).toBeUndefined();
+  });
+});
+
+describe('cleanNulls utility tests', () => {
+  test('filters out null values from array', () => {
+    const input = [1, null, 2, null, 3];
+    const result = cleanNulls(input);
+    expect(result).toEqual([1, 2, 3]);
+  });
+
+  test('returns null when array contains only nulls', () => {
+    const input = [null, null, null];
+    const result = cleanNulls(input);
+    expect(result).toBeNull();
+  });
+
+  test('returns null when array is empty', () => {
+    const input: Array<string | null> = [];
+    const result = cleanNulls(input);
+    expect(result).toBeNull();
+  });
+
+  test('returns the same array when no nulls present', () => {
+    const input = [1, 2, 3, 4];
+    const result = cleanNulls(input);
+    expect(result).toEqual([1, 2, 3, 4]);
+  });
+});
+
+describe('Global manager installation edge cases', () => {
+  beforeEach(clearCache);
+
+  test('handles package manager command failure', async () => {
+    type FakeManager = 'nonexistent-manager';
+    const fakeManager: FakeManager = 'nonexistent-manager';
+    const cacheKey = `globalInstall-${fakeManager}`;
+    cache.set(cacheKey, { isGlobalInstalled: false });
+
+    const cached = cache.get(cacheKey);
+    expect(cached).toEqual({ isGlobalInstalled: false });
+  });
+
+  test('returns null when no global managers installed', async () => {
+    cache.set('globalInstall-npm', { isGlobalInstalled: false });
+    cache.set('globalInstall-yarn', { isGlobalInstalled: false });
+    cache.set('globalInstall-pnpm', { isGlobalInstalled: false });
+    cache.set('globalInstall-bun', { isGlobalInstalled: false });
+    cache.set('globalManagers', { globalManagers: null });
+
+    const result = await defineGlobalManagers();
+    expect(result).toBeNull();
   });
 });
